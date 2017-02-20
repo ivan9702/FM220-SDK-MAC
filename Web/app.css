@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "BankGothic Lt BT Light";
+  src: url(BankGothicLtBTLight.ttf);
+}
+
+@font-face {
+  font-family: "BankGothic Md BT Medium";
+  src: url(BankGothicMdBTMedium.ttf);
+}
+
+body {
+  font-family: "BankGothic Lt BT Light";
+  background-color: rgb(26, 90, 94);
+  color: rgb(58, 193, 193);
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#connect_screen {
+  text-align: center;
+}
+
+#nav_menu {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+
+.right {
+  position: absolute;
+  overflow-y: scroll;
+  left: 200px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#nav_menu li {
+  list-style-type: none;
+  font-size: 14pt;
+  margin-top: 10pt;
+}
+
+.highlight {
+  color: white;
+}
+
+.finger.highlight {
+  border: 2px solid white;
+}
+
+.matching {
+  background-color: yellow;
+}
+
+li.user {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-size: 16pt;
+}
+
+.user ul {
+  display: inline-block;
+}
+
+button {
+  color: rgb(58, 193, 193);
+  background-color: transparent;
+  border: none;
+  font-size: 14pt;
+  font-family: "BankGothic Lt BT Light";
+  display: inline-block;
+}
+
+.user li.finger {
+  display: inline-block;
+}
+
+.fingers {
+  padding: 0px 10px 10px 0px;
+}
+
+li.finger {
+  font-size: 12pt;
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 5px 15px 5px 15px;
+  margin: 10px 10px 10px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+
+.finger_data_view {
+  text-align: center;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.finger_data_view hr {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hex_view {
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.6);
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.bottom_right_button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.second_pane {
+  top: 0;
+  width: 400px;
+  bottom: 0;
+  padding: 10px 0 10px 0;
+  overflow-y: scroll;
+}
+
+.third_pane {
+  position: absolute;
+  top: 0;
+  left: 400px;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  overflow-y: scroll;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#user_view {
+  text-align: center;
+}
+
+input[type="text"] {
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px;
+  font-size: 12pt;
+  font-family: "BankGothic Lt BT Light";
+  color: rgba(255, 255, 255, 0.8);
+}

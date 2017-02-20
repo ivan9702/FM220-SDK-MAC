@@ -1,1 +1,1 @@
-# FM220-SDK-MAC
+# FingerprintDemo

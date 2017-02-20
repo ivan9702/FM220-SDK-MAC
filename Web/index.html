@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>STARTEK</title>
+  <script src="vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+
+<div id="app">
+  <div v-if="!connected" id="connect_screen">
+    <h1>STARTEK</h1>
+    <p>PLUG IN FINGERPRINT READER</p>
+    <img src="usb.svg">
+  </div>
+  <div v-else>
+    <ul id="nav_menu">
+      <li v-for="page in pages" :class="{highlight:page===current_page}" @click="click_nav(page)">
+        {{ page }}
+      </li>
+    </ul>
+
+    <local class="right"
+           v-if="current_page==='LOCAL'" :users=users :selected_user=selected_user :mode=local_mode :matching=matching
+           v-on:show_new_user=show_new_user 
+           v-on:show_user_list=show_user_list
+           v-on:show_user=show_user
+           v-on:add_user=add_user
+           v-on:delete_user=delete_user
+           v-on:delete_finger=delete_finger
+           v-on:finger_added=finger_added
+           v-on:show_match=show_match>
+    </local>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8557E5A91E55A44600E152B8 /* BCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5A81E55A44600E152B8 /* BCPerson.m */; };
+		8557E5AD1E55A48F00E152B8 /* BCFingerprint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5AC1E55A48F00E152B8 /* BCFingerprint.m */; };
+		8557E5B01E560DD900E152B8 /* NSImage+FingerDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5AF1E560DD900E152B8 /* NSImage+FingerDetect.m */; };
+		8557E5D61E56620400E152B8 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5C71E56620400E152B8 /* common.c */; };
+		8557E5D71E56620400E152B8 /* device_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5C91E56620400E152B8 /* device_test.c */; };
+		8557E5D81E56620400E152B8 /* fm220.c in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5CC1E56620400E152B8 /* fm220.c */; };
+		8557E5D91E56620400E152B8 /* fp160.c in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5CE1E56620400E152B8 /* fp160.c */; };
+		8557E5DA1E56620400E152B8 /* HYFM220Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5D11E56620400E152B8 /* HYFM220Scanner.m */; };
+		8557E5DB1E56620400E152B8 /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5D21E56620400E152B8 /* image.c */; };
+		8557E5DC1E56620400E152B8 /* libusb-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8557E5D41E56620400E152B8 /* libusb-1.0.0.dylib */; };
+		8557E5DD1E56622C00E152B8 /* libusb-1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8557E5D41E56620400E152B8 /* libusb-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8557E5DF1E56D5F800E152B8 /* fingerprint.png in Resources */ = {isa = PBXBuildFile; fileRef = 8557E5DE1E56D5F800E152B8 /* fingerprint.png */; };
+		8557E5E21E56EAE500E152B8 /* BankGothicLtBTLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8557E5E01E56EAE500E152B8 /* BankGothicLtBTLight.ttf */; };
+		8557E5E31E56EAE500E152B8 /* BankGothicMdBTMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8557E5E11E56EAE500E152B8 /* BankGothicMdBTMedium.ttf */; };
+		85FCB17D1E15566800B94323 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FCB17C1E15566800B94323 /* AppDelegate.m */; };
+		85FCB1801E15566900B94323 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FCB17F1E15566900B94323 /* main.m */; };
+		85FCB1821E15566900B94323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FCB1811E15566900B94323 /* Assets.xcassets */; };
+		85FCB1851E15566900B94323 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85FCB1831E15566900B94323 /* MainMenu.xib */; };
+		85FCB18E1E15581500B94323 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FCB18D1E15581500B94323 /* WebKit.framework */; };
+		85FCB1901E15584500B94323 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FCB18F1E15584500B94323 /* IOKit.framework */; };
+		85FCB1991E155C7600B94323 /* usb.svg in Resources */ = {isa = PBXBuildFile; fileRef = 85FCB1961E155C7600B94323 /* usb.svg */; };
+		85FCB19E1E157CDB00B94323 /* app.css in Resources */ = {isa = PBXBuildFile; fileRef = 85FCB19A1E157CDB00B94323 /* app.css */; };
+		85FCB19F1E157CDB00B94323 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 85FCB19B1E157CDB00B94323 /* app.js */; };
+		85FCB1A01E157CDB00B94323 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 85FCB19C1E157CDB00B94323 /* index.html */; };
+		85FCB1A11E157CDB00B94323 /* vue.js in Resources */ = {isa = PBXBuildFile; fileRef = 85FCB19D1E157CDB00B94323 /* vue.js */; };
+		85FCB1A31E157D4700B94323 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FCB1A21E157D4700B94323 /* JavaScriptCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		858BF1191E1B560E00A331FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8557E5DD1E56622C00E152B8 /* libusb-1.0.0.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8557E5A71E55A44600E152B8 /* BCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCPerson.h; path = FingerprintDemo/BCPerson.h; sourceTree = SOURCE_ROOT; };
+		8557E5A81E55A44600E152B8 /* BCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCPerson.m; path = FingerprintDemo/BCPerson.m; sourceTree = SOURCE_ROOT; };
+		8557E5AB1E55A48F00E152B8 /* BCFingerprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFingerprint.h; sourceTree = "<group>"; };
+		8557E5AC1E55A48F00E152B8 /* BCFingerprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFingerprint.m; sourceTree = "<group>"; };
+		8557E5AE1E560DD900E152B8 /* NSImage+FingerDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+FingerDetect.h"; sourceTree = "<group>"; };
+		8557E5AF1E560DD900E152B8 /* NSImage+FingerDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+FingerDetect.m"; sourceTree = "<group>"; };
+		8557E5C71E56620400E152B8 /* common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
+		8557E5C81E56620400E152B8 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		8557E5C91E56620400E152B8 /* device_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = device_test.c; sourceTree = "<group>"; };
+		8557E5CA1E56620400E152B8 /* device_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device_test.h; sourceTree = "<group>"; };
+		8557E5CB1E56620400E152B8 /* FingerprintKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerprintKit.h; sourceTree = "<group>"; };
+		8557E5CC1E56620400E152B8 /* fm220.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fm220.c; sourceTree = "<group>"; };
+		8557E5CD1E56620400E152B8 /* fm220.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fm220.h; sourceTree = "<group>"; };
+		8557E5CE1E56620400E152B8 /* fp160.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fp160.c; sourceTree = "<group>"; };
+		8557E5CF1E56620400E152B8 /* fp160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fp160.h; sourceTree = "<group>"; };
+		8557E5D01E56620400E152B8 /* HYFM220Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFM220Scanner.h; sourceTree = "<group>"; };
+		8557E5D11E56620400E152B8 /* HYFM220Scanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFM220Scanner.m; sourceTree = "<group>"; };
+		8557E5D21E56620400E152B8 /* image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image.c; sourceTree = "<group>"; };
+		8557E5D31E56620400E152B8 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
+		8557E5D41E56620400E152B8 /* libusb-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libusb-1.0.0.dylib"; sourceTree = "<group>"; };
+		8557E5D51E56620400E152B8 /* libusb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libusb.h; sourceTree = "<group>"; };
+		8557E5DE1E56D5F800E152B8 /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
+		8557E5E01E56EAE500E152B8 /* BankGothicLtBTLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BankGothicLtBTLight.ttf; sourceTree = "<group>"; };
+		8557E5E11E56EAE500E152B8 /* BankGothicMdBTMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BankGothicMdBTMedium.ttf; sourceTree = "<group>"; };
+		85FCB1781E15566800B94323 /* FingerprintDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerprintDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FCB17B1E15566800B94323 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		85FCB17C1E15566800B94323 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		85FCB17F1E15566900B94323 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85FCB1811E15566900B94323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85FCB1841E15566900B94323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		85FCB1861E15566900B94323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85FCB18D1E15581500B94323 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		85FCB18F1E15584500B94323 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		85FCB1961E155C7600B94323 /* usb.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = usb.svg; sourceTree = "<group>"; };
+		85FCB19A1E157CDB00B94323 /* app.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = app.css; sourceTree = "<group>"; };
+		85FCB19B1E157CDB00B94323 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		85FCB19C1E157CDB00B94323 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		85FCB19D1E157CDB00B94323 /* vue.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vue.js; sourceTree = "<group>"; };
+		85FCB1A21E157D4700B94323 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85FCB1751E15566800B94323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FCB1A31E157D4700B94323 /* JavaScriptCore.framework in Frameworks */,
+				85FCB1901E15584500B94323 /* IOKit.framework in Frameworks */,
+				85FCB18E1E15581500B94323 /* WebKit.framework in Frameworks */,
+				8557E5DC1E56620400E152B8 /* libusb-1.0.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8557E5AA1E55A44F00E152B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8557E5AE1E560DD900E152B8 /* NSImage+FingerDetect.h */,
+				8557E5AF1E560DD900E152B8 /* NSImage+FingerDetect.m */,
+				8557E5A71E55A44600E152B8 /* BCPerson.h */,
+				8557E5A81E55A44600E152B8 /* BCPerson.m */,
+				8557E5AB1E55A48F00E152B8 /* BCFingerprint.h */,
+				8557E5AC1E55A48F00E152B8 /* BCFingerprint.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8557E5C61E56620400E152B8 /* scanner */ = {
+			isa = PBXGroup;
+			children = (
+				8557E5C71E56620400E152B8 /* common.c */,
+				8557E5C81E56620400E152B8 /* common.h */,
+				8557E5C91E56620400E152B8 /* device_test.c */,
+				8557E5CA1E56620400E152B8 /* device_test.h */,
+				8557E5CB1E56620400E152B8 /* FingerprintKit.h */,
+				8557E5CC1E56620400E152B8 /* fm220.c */,
+				8557E5CD1E56620400E152B8 /* fm220.h */,
+				8557E5CE1E56620400E152B8 /* fp160.c */,
+				8557E5CF1E56620400E152B8 /* fp160.h */,
+				8557E5D01E56620400E152B8 /* HYFM220Scanner.h */,
+				8557E5D11E56620400E152B8 /* HYFM220Scanner.m */,
+				8557E5D21E56620400E152B8 /* image.c */,
+				8557E5D31E56620400E152B8 /* image.h */,
+				8557E5D41E56620400E152B8 /* libusb-1.0.0.dylib */,
+				8557E5D51E56620400E152B8 /* libusb.h */,
+			);
+			path = scanner;
+			sourceTree = "<group>";
+		};
+		85FCB16F1E15566800B94323 = {
+			isa = PBXGroup;
+			children = (
+				85FCB17A1E15566800B94323 /* FingerprintDemo */,
+				85FCB1791E15566800B94323 /* Products */,
+				85FCB18C1E15581500B94323 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85FCB1791E15566800B94323 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85FCB1781E15566800B94323 /* FingerprintDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85FCB17A1E15566800B94323 /* FingerprintDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8557E5C61E56620400E152B8 /* scanner */,
+				85FCB1931E15596B00B94323 /* Web */,
+				85FCB17B1E15566800B94323 /* AppDelegate.h */,
+				85FCB17C1E15566800B94323 /* AppDelegate.m */,
+				8557E5AA1E55A44F00E152B8 /* Model */,
+				85FCB1811E15566900B94323 /* Assets.xcassets */,
+				85FCB1831E15566900B94323 /* MainMenu.xib */,
+				85FCB1861E15566900B94323 /* Info.plist */,
+				85FCB17E1E15566900B94323 /* Supporting Files */,
+			);
+			path = FingerprintDemo;
+			sourceTree = "<group>";
+		};
+		85FCB17E1E15566900B94323 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85FCB17F1E15566900B94323 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85FCB18C1E15581500B94323 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85FCB1A21E157D4700B94323 /* JavaScriptCore.framework */,
+				85FCB18F1E15584500B94323 /* IOKit.framework */,
+				85FCB18D1E15581500B94323 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85FCB1931E15596B00B94323 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				8557E5E01E56EAE500E152B8 /* BankGothicLtBTLight.ttf */,
+				8557E5E11E56EAE500E152B8 /* BankGothicMdBTMedium.ttf */,
+				85FCB19A1E157CDB00B94323 /* app.css */,
+				8557E5DE1E56D5F800E152B8 /* fingerprint.png */,
+				85FCB19B1E157CDB00B94323 /* app.js */,
+				85FCB19C1E157CDB00B94323 /* index.html */,
+				85FCB19D1E157CDB00B94323 /* vue.js */,
+				85FCB1961E155C7600B94323 /* usb.svg */,
+			);
+			path = Web;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85FCB1771E15566800B94323 /* FingerprintDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85FCB1891E15566900B94323 /* Build configuration list for PBXNativeTarget "FingerprintDemo" */;
+			buildPhases = (
+				85FCB1741E15566800B94323 /* Sources */,
+				85FCB1751E15566800B94323 /* Frameworks */,
+				85FCB1761E15566800B94323 /* Resources */,
+				858BF1191E1B560E00A331FB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FingerprintDemo;
+			productName = FingerprintDemo;
+			productReference = 85FCB1781E15566800B94323 /* FingerprintDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85FCB1701E15566800B94323 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = brocas;
+				TargetAttributes = {
+					85FCB1771E15566800B94323 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GNEXKQ27HT;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 85FCB1731E15566800B94323 /* Build configuration list for PBXProject "FingerprintDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85FCB16F1E15566800B94323;
+			productRefGroup = 85FCB1791E15566800B94323 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85FCB1771E15566800B94323 /* FingerprintDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85FCB1761E15566800B94323 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8557E5E31E56EAE500E152B8 /* BankGothicMdBTMedium.ttf in Resources */,
+				85FCB19F1E157CDB00B94323 /* app.js in Resources */,
+				85FCB1821E15566900B94323 /* Assets.xcassets in Resources */,
+				8557E5DF1E56D5F800E152B8 /* fingerprint.png in Resources */,
+				85FCB1A11E157CDB00B94323 /* vue.js in Resources */,
+				85FCB1991E155C7600B94323 /* usb.svg in Resources */,
+				85FCB1A01E157CDB00B94323 /* index.html in Resources */,
+				85FCB1851E15566900B94323 /* MainMenu.xib in Resources */,
+				85FCB19E1E157CDB00B94323 /* app.css in Resources */,
+				8557E5E21E56EAE500E152B8 /* BankGothicLtBTLight.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85FCB1741E15566800B94323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8557E5AD1E55A48F00E152B8 /* BCFingerprint.m in Sources */,
+				8557E5D61E56620400E152B8 /* common.c in Sources */,
+				8557E5DB1E56620400E152B8 /* image.c in Sources */,
+				8557E5DA1E56620400E152B8 /* HYFM220Scanner.m in Sources */,
+				8557E5D81E56620400E152B8 /* fm220.c in Sources */,
+				8557E5B01E560DD900E152B8 /* NSImage+FingerDetect.m in Sources */,
+				8557E5A91E55A44600E152B8 /* BCPerson.m in Sources */,
+				8557E5D71E56620400E152B8 /* device_test.c in Sources */,
+				85FCB1801E15566900B94323 /* main.m in Sources */,
+				85FCB17D1E15566800B94323 /* AppDelegate.m in Sources */,
+				8557E5D91E56620400E152B8 /* fp160.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		85FCB1831E15566900B94323 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85FCB1841E15566900B94323 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85FCB1871E15566900B94323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		85FCB1881E15566900B94323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		85FCB18A1E15566900B94323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNEXKQ27HT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FingerprintDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Web",
+					"$(PROJECT_DIR)/FingerprintDemo/scanner",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brocas.FingerprintDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		85FCB18B1E15566900B94323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GNEXKQ27HT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FingerprintDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Web",
+					"$(PROJECT_DIR)/FingerprintDemo/scanner",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brocas.FingerprintDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85FCB1731E15566800B94323 /* Build configuration list for PBXProject "FingerprintDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FCB1871E15566900B94323 /* Debug */,
+				85FCB1881E15566900B94323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85FCB1891E15566900B94323 /* Build configuration list for PBXNativeTarget "FingerprintDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FCB18A1E15566900B94323 /* Debug */,
+				85FCB18B1E15566900B94323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85FCB1701E15566800B94323 /* Project object */;
+}

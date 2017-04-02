@@ -119,6 +119,8 @@
                 self.hasFingerprintCheckbox.state = hasFingerprint ? NSOnState : NSOffState;
                 if (hasFingerprint) {
                     self.workingData = [img fingerprintData];
+                } else {
+                    self.workingData = nil;
                 }
                 
                 ctx[@"app"][@"matching"] = hasFingerprint ? self.workingData.hexString : [NSNull null];

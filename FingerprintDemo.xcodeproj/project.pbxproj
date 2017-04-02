@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85491B3B1E7A865400BD8278 /* fingerprintIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B321E7A865400BD8278 /* fingerprintIcon.png */; };
+		85491B3C1E7A865400BD8278 /* fingerprintIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B331E7A865400BD8278 /* fingerprintIcon@2x.png */; };
+		85491B3D1E7A865400BD8278 /* fingerprintIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B341E7A865400BD8278 /* fingerprintIcon@3x.png */; };
+		85491B3E1E7A865400BD8278 /* spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B351E7A865400BD8278 /* spinner.png */; };
+		85491B3F1E7A865400BD8278 /* spinner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B361E7A865400BD8278 /* spinner@2x.png */; };
+		85491B401E7A865400BD8278 /* spinner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B371E7A865400BD8278 /* spinner@3x.png */; };
+		85491B411E7A865400BD8278 /* usb_connect_fig.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B381E7A865400BD8278 /* usb_connect_fig.png */; };
+		85491B421E7A865400BD8278 /* usb_connect_fig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B391E7A865400BD8278 /* usb_connect_fig@2x.png */; };
+		85491B431E7A865400BD8278 /* usb_connect_fig@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85491B3A1E7A865400BD8278 /* usb_connect_fig@3x.png */; };
 		8557E5A91E55A44600E152B8 /* BCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5A81E55A44600E152B8 /* BCPerson.m */; };
 		8557E5AD1E55A48F00E152B8 /* BCFingerprint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5AC1E55A48F00E152B8 /* BCFingerprint.m */; };
 		8557E5B01E560DD900E152B8 /* NSImage+FingerDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557E5AF1E560DD900E152B8 /* NSImage+FingerDetect.m */; };
@@ -49,6 +58,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		85491B321E7A865400BD8278 /* fingerprintIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprintIcon.png; sourceTree = "<group>"; };
+		85491B331E7A865400BD8278 /* fingerprintIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprintIcon@2x.png"; sourceTree = "<group>"; };
+		85491B341E7A865400BD8278 /* fingerprintIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprintIcon@3x.png"; sourceTree = "<group>"; };
+		85491B351E7A865400BD8278 /* spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner.png; sourceTree = "<group>"; };
+		85491B361E7A865400BD8278 /* spinner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spinner@2x.png"; sourceTree = "<group>"; };
+		85491B371E7A865400BD8278 /* spinner@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spinner@3x.png"; sourceTree = "<group>"; };
+		85491B381E7A865400BD8278 /* usb_connect_fig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usb_connect_fig.png; sourceTree = "<group>"; };
+		85491B391E7A865400BD8278 /* usb_connect_fig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usb_connect_fig@2x.png"; sourceTree = "<group>"; };
+		85491B3A1E7A865400BD8278 /* usb_connect_fig@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usb_connect_fig@3x.png"; sourceTree = "<group>"; };
 		8557E5A71E55A44600E152B8 /* BCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCPerson.h; path = FingerprintDemo/BCPerson.h; sourceTree = SOURCE_ROOT; };
 		8557E5A81E55A44600E152B8 /* BCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCPerson.m; path = FingerprintDemo/BCPerson.m; sourceTree = SOURCE_ROOT; };
 		8557E5AB1E55A48F00E152B8 /* BCFingerprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFingerprint.h; sourceTree = "<group>"; };
@@ -194,6 +212,15 @@
 		85FCB1931E15596B00B94323 /* Web */ = {
 			isa = PBXGroup;
 			children = (
+				85491B321E7A865400BD8278 /* fingerprintIcon.png */,
+				85491B331E7A865400BD8278 /* fingerprintIcon@2x.png */,
+				85491B341E7A865400BD8278 /* fingerprintIcon@3x.png */,
+				85491B351E7A865400BD8278 /* spinner.png */,
+				85491B361E7A865400BD8278 /* spinner@2x.png */,
+				85491B371E7A865400BD8278 /* spinner@3x.png */,
+				85491B381E7A865400BD8278 /* usb_connect_fig.png */,
+				85491B391E7A865400BD8278 /* usb_connect_fig@2x.png */,
+				85491B3A1E7A865400BD8278 /* usb_connect_fig@3x.png */,
 				8557E5E01E56EAE500E152B8 /* BankGothicLtBTLight.ttf */,
 				8557E5E11E56EAE500E152B8 /* BankGothicMdBTMedium.ttf */,
 				85FCB19A1E157CDB00B94323 /* app.css */,
@@ -238,7 +265,7 @@
 				TargetAttributes = {
 					85FCB1771E15566800B94323 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = GNEXKQ27HT;
+						DevelopmentTeam = Y2DE56X55C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -266,12 +293,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85491B3C1E7A865400BD8278 /* fingerprintIcon@2x.png in Resources */,
+				85491B421E7A865400BD8278 /* usb_connect_fig@2x.png in Resources */,
+				85491B3B1E7A865400BD8278 /* fingerprintIcon.png in Resources */,
+				85491B3D1E7A865400BD8278 /* fingerprintIcon@3x.png in Resources */,
+				85491B3F1E7A865400BD8278 /* spinner@2x.png in Resources */,
+				85491B411E7A865400BD8278 /* usb_connect_fig.png in Resources */,
 				8557E5E31E56EAE500E152B8 /* BankGothicMdBTMedium.ttf in Resources */,
 				85FCB19F1E157CDB00B94323 /* app.js in Resources */,
 				85FCB1821E15566900B94323 /* Assets.xcassets in Resources */,
+				85491B431E7A865400BD8278 /* usb_connect_fig@3x.png in Resources */,
 				8557E5DF1E56D5F800E152B8 /* fingerprint.png in Resources */,
+				85491B3E1E7A865400BD8278 /* spinner.png in Resources */,
 				85FCB1A11E157CDB00B94323 /* vue.js in Resources */,
 				85FCB1991E155C7600B94323 /* usb.svg in Resources */,
+				85491B401E7A865400BD8278 /* spinner@3x.png in Resources */,
 				85FCB1A01E157CDB00B94323 /* index.html in Resources */,
 				85FCB1851E15566900B94323 /* MainMenu.xib in Resources */,
 				85FCB19E1E157CDB00B94323 /* app.css in Resources */,
@@ -405,9 +441,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = GNEXKQ27HT;
+				COMBINE_HIDPI_IMAGES = NO;
+				DEVELOPMENT_TEAM = Y2DE56X55C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -428,9 +463,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = GNEXKQ27HT;
+				COMBINE_HIDPI_IMAGES = NO;
+				DEVELOPMENT_TEAM = Y2DE56X55C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

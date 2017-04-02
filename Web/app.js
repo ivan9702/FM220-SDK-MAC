@@ -1,8 +1,17 @@
+var eventHub = new Vue();
+
 function cocoa_reset_finger() {
 }
 
+var _cocoa_get_finger_called = 0;
+
 function cocoa_get_finger() {
-  return "FFFF";
+  _cocoa_get_finger_called++;
+  if (_cocoa_get_finger_called % 2 == 0) {
+    return null;
+  } else {
+    return "FFFF";
+  }
 }
 
 function cocoa_update_users(users) {
@@ -83,31 +92,32 @@ Vue.component('finger-view', {
   }
 })
 
-Vue.component('add-finger-view', {
-  template: '<div id="add-finger-view">\
-    <h2>SELECT A FINGER</h2>\
-    <select v-model="selected" @change="on_change">\
-      <option v-for="f in fingers">{{f}}</option>\
-    </select>\
-    <p>PLACE FINGER 3 TIMES ON SCANNER TO FINISH</p>\
-    <span v-show="data_count > 0">☝🏻</span>\
-    <span v-show="data_count > 1">☝🏻</span>\
-    <span v-show="data_count > 2">☝🏻</span>\
-  </div>',
+Vue.component('request-three-finger-view', {
+  template: '<div>\
+      <img class="spinner" src="spinner.png" srcset="spinner@2x.png 2x, spinner@3x.png 3x" width="127" height="127" />\
+      <p><slot>PLACE FINGER 3 TIMES ON SCANNER TO FINISH</slot></p>\
+      <div id="three_fingers_pane">\
+        <span v-show="data_count > 0"><img class="finger_icon" src="fingerprintIcon@3x.png" width="74" height="74"></span>\
+        <span v-show="data_count > 1"><img class="finger_icon" src="fingerprintIcon@3x.png" width="74" height="74"></span>\
+        <span v-show="data_count > 2"><img class="finger_icon" src="fingerprintIcon@3x.png" width="74" height="74"></span>\
+      <div>\
+    </div>',
   data: function() {
     return {
-      fingers: ["LEFT THUMB", "LEFT INDEX", "LEFT MIDDLE", "LEFT RING", "LEFT PINKY",
-                "RIGHT THUMB", "RIGHT INDEX", "RIGHT MIDDLE", "RIGHT RING", "RIGHT PINKY"],
-      selected: null,
       data_count: 0,
       d: [],
+      no_finger: false,
       token: 0
     };
   },
+  created: function() {
+    eventHub.$on('start_request_three_fingers', this.begin_request);
+  },
   methods: {
-    on_change: function(e) {
+    begin_request: function() {
       this.data_count = 0;
       this.d = [];
+      this.no_finger = false;
       this.token = Math.random();
       this.request_finger(this.token);
     },
@@ -115,26 +125,77 @@ Vue.component('add-finger-view', {
       if (this.data_count >= 3) return;
       if (token != this.token) return;
       var ctx = this;
-      cocoa_reset_finger();
       var poll_finger = function() {
         if (token != ctx.token) return;
         var d = {};
         d = cocoa_get_finger();
-        if (d) {
-          ctx.d.push(d);
-          ctx.data_count++;
-          if (ctx.data_count < 3) {
-            setTimeout(function(){ctx.request_finger(token)}, 2200);
-          } else {
-            // finish!
-            var f = {"name":ctx.selected, "data":ctx.d[0]+ctx.d[1]+ctx.d[2]};
-            ctx.$emit("finger_added", f);
-          }
-        } else {
+
+        if (d && ctx.no_finger) {
+          // New fingerpint
+            ctx.d.push(d);
+            ctx.data_count++;
+            if (ctx.data_count < 3) {
+              setTimeout(function(){ctx.request_finger(token)}, 800);
+            } else {
+              ctx.$emit("got_three_fingerprint", ctx.d);
+            }
+            ctx.no_finger = false;
+        } else if (d && !ctx.no_finger) {
+          // Finger continually pressed. Need to relase and press again.
+          setTimeout(function(){ctx.request_finger(token)}, 800);
+        } else { 
+          // No finger found. Now we can get the next finger.
+          ctx.no_finger = true;
           setTimeout(poll_finger, 500);
         }
       };
       setTimeout(poll_finger, 500);
+    }
+  }
+})
+
+Vue.component('add-finger-view', {
+  template: '<div id="add-finger-view">\
+    <h2>SELECT A FINGER</h2>\
+    <select v-model="selected" @change="on_change">\
+      <option v-for="f in fingers">{{f}}</option>\
+    </select>\
+    <request-three-finger-view  v-show="selected != null" \
+                                v-on:got_three_fingerprint="fingerprint_collected">\
+    </request-three-finger-view>\
+  </div>',
+  props: ["banned_fingers"],
+  data: function() {
+    var fingers = ["LEFT THUMB", "LEFT INDEX", "LEFT MIDDLE", "LEFT RING", "LEFT PINKY",
+                "RIGHT THUMB", "RIGHT INDEX", "RIGHT MIDDLE", "RIGHT RING", "RIGHT PINKY"];
+    var valid_fingers = [];
+    for (var i = 0; i < fingers.length; i++) {
+      var f = fingers[i];
+      var banned = false;
+      for (var j = 0; j < this.banned_fingers.length; j++) {
+        if (this.banned_fingers[j].name === f) {
+          banned = true;
+          break;
+        }
+      }
+      if (!banned) {
+        valid_fingers.push(f);
+      }
+    }
+    return {
+      "fingers": valid_fingers,
+      selected: null
+    }; 
+  },
+  methods: {
+    on_change: function(e) {
+      eventHub.$emit('start_request_three_fingers');
+    },
+    fingerprint_collected: function(d) {
+      if (this.selected) {
+        var f = {"name":this.selected, "data":d[0]+d[1]+d[2]};
+        this.$emit("finger_added", f);
+      }
     }
   }
 })
@@ -147,7 +208,7 @@ Vue.component('user-view', {
   <button @click="add_finger">ADD FINGER</button>\
     <div class="third_pane">\
       <finger-view v-if="selected_finger" :finger=selected_finger v-on:delete_finger="delete_finger" />\
-      <add-finger-view v-if="!selected_finger" v-on:finger_added="finger_added" />\
+      <add-finger-view v-if="!selected_finger" v-on:finger_added="finger_added" :banned_fingers=user.fingers />\
     </div>\
   </div>',
   props: ["user"],
@@ -283,6 +344,58 @@ Vue.component('local', {
   }
 })
 
+Vue.component('wait_matching_view', {
+  template: '<div>\
+    <request-three-finger-view v-on:got_three_fingerprint="fingerprint_collected">\
+    PLACE FINGER 3 TIMES ON SCANNER TO START\
+    </request-three-finger-view>\
+  </div>',
+  data: function() {
+    return {};
+  },
+  mounted: function() {
+    console.log('mounted');
+    eventHub.$emit('start_request_three_fingers');
+  },
+  methods: {
+    fingerprint_collected: function(d) {
+      // TODO: merge d[0], d[1] and d[2]
+      var data = d[0]; 
+      this.$emit('done', data);
+    }
+  }
+})
+
+Vue.component('matching_view', {
+  template: '<div>Match</div>'
+})
+
+Vue.component('server', {
+  template: '<div>\
+    <wait_matching_view v-if="finger_to_search == null" v-on:done=finger_available >\
+    </wait_matching_view>\
+    <matching_view v-if="finger_to_search != null">\
+    </matching_view>\
+  </div>',
+  created: function() {
+    eventHub.$on('reset-server', this.reset);
+  },
+  data: function() {
+    return {
+      finger_to_search: null
+    };
+  },
+  methods: {
+    reset: function() {
+      this.finger_to_search = null;
+    },
+    finger_available: function(f) {
+      console.log('available!', f);
+      this.finger_to_search = f;
+    }
+  }
+})
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -300,6 +413,8 @@ var app = new Vue({
       this.current_page = p;
       if (p === "LOCAL") {
         this.local_mode = "list";
+      } else if (p === "SERVER") {
+        eventHub.$emit('reset-server');
       }
     },
     show_new_user: function() {

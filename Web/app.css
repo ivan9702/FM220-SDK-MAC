@@ -10,8 +10,9 @@
 
 body {
   font-family: "BankGothic Lt BT Light";
-  background-color: rgb(26, 90, 94);
+  background: rgb(26, 90, 94);
   color: rgb(58, 193, 193);
+  height: 100%;
 }
 
 #app {
@@ -20,6 +21,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  background: linear-gradient(rgb(26, 90, 94), rgb(56, 120, 124), rgb(26, 90, 94));
 }
 
 #connect_screen {
@@ -149,6 +151,26 @@ li.finger {
   text-align: center;
 }
 
+.finger_icon {
+  margin-top: 12px;
+  margin-left: 11px;
+  margin-right: 11px;
+}
+
+#three_fingers_pane {
+  text-align: left;
+  width: 300px;
+  height: 100px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px 0 10px;
+
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 input[type="text"] {
   border-radius: 2px;
   border: none;
@@ -159,3 +181,20 @@ input[type="text"] {
   font-family: "BankGothic Lt BT Light";
   color: rgba(255, 255, 255, 0.8);
 }
+
+.spinner {
+    /*position: absolute;*/
+    display: block;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    width: 127px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

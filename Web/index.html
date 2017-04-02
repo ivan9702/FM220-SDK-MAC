@@ -13,7 +13,7 @@
   <div v-if="!connected" id="connect_screen">
     <h1>STARTEK</h1>
     <p>PLUG IN FINGERPRINT READER</p>
-    <img src="usb.svg">
+    <img src="usb_connect_fig.png" srcset="usb_connect_fig@2x.png 2x, usb_connect_fig@3x.png 3x" />
   </div>
   <div v-else>
     <ul id="nav_menu">
@@ -33,6 +33,11 @@
            v-on:finger_added=finger_added
            v-on:show_match=show_match>
     </local>
+    <server class="right"
+           v-if="current_page==='SERVER'" 
+    >
+      
+    </server>
   </div>
 </div>
 

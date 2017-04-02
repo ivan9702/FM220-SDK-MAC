@@ -23,7 +23,8 @@ static dispatch_once_t onceToken;
 + (BOOL) hasConnectedDevice
 {
     dispatch_once(&onceToken, ^{
-        NSAssert(libusb_init(NULL) >= 0, @"Cannot initialize libusb");
+        int r = libusb_init(NULL);
+        NSAssert(r >= 0, @"Cannot initialize libusb");
     });
     return is_fm220_connected();
 }
@@ -31,7 +32,8 @@ static dispatch_once_t onceToken;
 + (instancetype) device
 {
     dispatch_once(&onceToken, ^{
-        NSAssert(libusb_init(NULL) >= 0, @"Cannot initialize libusb");
+        int r = libusb_init(NULL);
+        NSAssert(r >= 0, @"Cannot initialize libusb");
     });
     
     struct libusb_device_handle *handle = fm220_device_handle();

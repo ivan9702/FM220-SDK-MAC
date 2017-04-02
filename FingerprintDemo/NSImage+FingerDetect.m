@@ -44,7 +44,7 @@
             [d appendBytes: b length: 1];
         }
     }
-    return d;
+    return [d subdataWithRange: NSMakeRange(0, MIN(512, d.length))];
 }
 @end
 
